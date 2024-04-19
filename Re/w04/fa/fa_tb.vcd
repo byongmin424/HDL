@@ -1,0 +1,76 @@
+$date
+	Sat Apr 13 17:32:25 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module fa_tb $end
+$var wire 1 ! o_sum $end
+$var wire 1 " o_cout $end
+$var reg 3 # test_sig [2:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 #
+0"
+0!
+$end
+#10
+1!
+b1 #
+#20
+b10 #
+#30
+0!
+1"
+b11 #
+#40
+0"
+1!
+b100 #
+#50
+1"
+0!
+b101 #
+#60
+b110 #
+#70
+1!
+b111 #
+#80
+0"
+0!
+b0 #
+#90
+1!
+b1 #
+#100
+b10 #
+#110
+0!
+1"
+b11 #
+#120
+0"
+1!
+b100 #
+#130
+1"
+0!
+b101 #
+#140
+b110 #
+#150
+1!
+b111 #
+#160
+0"
+0!
+b0 #

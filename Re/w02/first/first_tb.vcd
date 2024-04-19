@@ -1,0 +1,54 @@
+$date
+	Wed Apr 10 23:00:05 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module first_tb $end
+$var wire 1 ! first_out3 $end
+$var wire 1 " first_out2 $end
+$var wire 1 # first_out1 $end
+$var reg 2 $ test_sig [1:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+0#
+0"
+0!
+$end
+#10
+1"
+1!
+b1 $
+#20
+b10 $
+#30
+1#
+0!
+b11 $
+#40
+0#
+0"
+b0 $
+#50
+1"
+1!
+b1 $
+#60
+b10 $
+#70
+1#
+0!
+b11 $
+#80
+0#
+0"
+b0 $

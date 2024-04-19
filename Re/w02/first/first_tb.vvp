@@ -1,0 +1,100 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x140e053d0 .scope module, "first_tb" "first_tb" 2 3;
+ .timescale -9 -9;
+v0x140e16560_0 .net "first_out1", 0 0, L_0x140e17790;  1 drivers
+v0x140e165f0_0 .net "first_out2", 0 0, L_0x140e17870;  1 drivers
+v0x140e16680_0 .net "first_out3", 0 0, L_0x140e17950;  1 drivers
+v0x140e16710_0 .var "test_sig", 1 0;
+L_0x140e17790 .part L_0x140e16be0, 0, 1;
+L_0x140e17870 .part L_0x140e17180, 0, 1;
+L_0x140e17950 .part L_0x140e17680, 0, 1;
+S_0x140e05540 .scope module, "u_test_sig" "first_module" 2 22, 3 1 0, S_0x140e053d0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 2 "first_in";
+    .port_info 1 /OUTPUT 3 "first_out1";
+    .port_info 2 /OUTPUT 3 "first_out2";
+    .port_info 3 /OUTPUT 3 "first_out3";
+L_0x140e16be0 .functor AND 3, L_0x140e16880, L_0x140e16a80, C4<111>, C4<111>;
+L_0x140e17180 .functor OR 3, L_0x140e16e40, L_0x140e17020, C4<000>, C4<000>;
+L_0x140e17680 .functor XOR 3, L_0x140e17360, L_0x140e17580, C4<000>, C4<000>;
+v0x140e04120_0 .net *"_ivl_1", 0 0, L_0x140e167a0;  1 drivers
+L_0x138040058 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x140e15520_0 .net *"_ivl_11", 1 0, L_0x138040058;  1 drivers
+v0x140e155d0_0 .net *"_ivl_15", 0 0, L_0x140e16cf0;  1 drivers
+v0x140e15690_0 .net *"_ivl_16", 2 0, L_0x140e16e40;  1 drivers
+L_0x1380400a0 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x140e15740_0 .net *"_ivl_19", 1 0, L_0x1380400a0;  1 drivers
+v0x140e15830_0 .net *"_ivl_2", 2 0, L_0x140e16880;  1 drivers
+v0x140e158e0_0 .net *"_ivl_21", 0 0, L_0x140e16f20;  1 drivers
+v0x140e15990_0 .net *"_ivl_22", 2 0, L_0x140e17020;  1 drivers
+L_0x1380400e8 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x140e15a40_0 .net *"_ivl_25", 1 0, L_0x1380400e8;  1 drivers
+v0x140e15b50_0 .net *"_ivl_29", 0 0, L_0x140e17270;  1 drivers
+v0x140e15c00_0 .net *"_ivl_30", 2 0, L_0x140e17360;  1 drivers
+L_0x138040130 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x140e15cb0_0 .net *"_ivl_33", 1 0, L_0x138040130;  1 drivers
+v0x140e15d60_0 .net *"_ivl_35", 0 0, L_0x140e17480;  1 drivers
+v0x140e15e10_0 .net *"_ivl_36", 2 0, L_0x140e17580;  1 drivers
+L_0x138040178 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x140e15ec0_0 .net *"_ivl_39", 1 0, L_0x138040178;  1 drivers
+L_0x138040010 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x140e15f70_0 .net *"_ivl_5", 1 0, L_0x138040010;  1 drivers
+v0x140e16020_0 .net *"_ivl_7", 0 0, L_0x140e169c0;  1 drivers
+v0x140e161b0_0 .net *"_ivl_8", 2 0, L_0x140e16a80;  1 drivers
+v0x140e16240_0 .net "first_in", 1 0, v0x140e16710_0;  1 drivers
+v0x140e162f0_0 .net "first_out1", 2 0, L_0x140e16be0;  1 drivers
+v0x140e163a0_0 .net "first_out2", 2 0, L_0x140e17180;  1 drivers
+v0x140e16450_0 .net "first_out3", 2 0, L_0x140e17680;  1 drivers
+L_0x140e167a0 .part v0x140e16710_0, 0, 1;
+L_0x140e16880 .concat [ 1 2 0 0], L_0x140e167a0, L_0x138040010;
+L_0x140e169c0 .part v0x140e16710_0, 1, 1;
+L_0x140e16a80 .concat [ 1 2 0 0], L_0x140e169c0, L_0x138040058;
+L_0x140e16cf0 .part v0x140e16710_0, 0, 1;
+L_0x140e16e40 .concat [ 1 2 0 0], L_0x140e16cf0, L_0x1380400a0;
+L_0x140e16f20 .part v0x140e16710_0, 1, 1;
+L_0x140e17020 .concat [ 1 2 0 0], L_0x140e16f20, L_0x1380400e8;
+L_0x140e17270 .part v0x140e16710_0, 0, 1;
+L_0x140e17360 .concat [ 1 2 0 0], L_0x140e17270, L_0x138040130;
+L_0x140e17480 .part v0x140e16710_0, 1, 1;
+L_0x140e17580 .concat [ 1 2 0 0], L_0x140e17480, L_0x138040178;
+    .scope S_0x140e053d0;
+T_0 ;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x140e16710_0, 0, 2;
+    %pushi/vec4 8, 0, 32;
+T_0.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_0.1, 5;
+    %jmp/1 T_0.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %delay 10, 0;
+    %load/vec4 v0x140e16710_0;
+    %addi 1, 0, 2;
+    %store/vec4 v0x140e16710_0, 0, 2;
+    %jmp T_0.0;
+T_0.1 ;
+    %pop/vec4 1;
+    %end;
+    .thread T_0;
+    .scope S_0x140e053d0;
+T_1 ;
+    %vpi_call 2 18 "$dumpfile", "first_tb.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000001 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "first_tb.v";
+    "first_module.v";

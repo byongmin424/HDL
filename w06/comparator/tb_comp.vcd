@@ -1,0 +1,92 @@
+$date
+	Mon Apr 15 22:55:50 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_comparator_2bit $end
+$var wire 1 ! w_not_equal $end
+$var wire 1 " w_great_b $end
+$var wire 1 # w_great_a $end
+$var wire 1 $ w_equal $end
+$var reg 2 % test_sig [1:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+1$
+0#
+0"
+0!
+$end
+#10
+0$
+1!
+1#
+b1 %
+#20
+1"
+0#
+b10 %
+#30
+1$
+0!
+0"
+b11 %
+#40
+b0 %
+#50
+0$
+1!
+1#
+b1 %
+#60
+1"
+0#
+b10 %
+#70
+1$
+0!
+0"
+b11 %
+#80
+b0 %
+#90
+0$
+1!
+1#
+b1 %
+#100
+1"
+0#
+b10 %
+#110
+1$
+0!
+0"
+b11 %
+#120
+b0 %
+#130
+0$
+1!
+1#
+b1 %
+#140
+1"
+0#
+b10 %
+#150
+1$
+0!
+0"
+b11 %
+#160
+b0 %

@@ -1,0 +1,59 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x153705ef0 .scope module, "first_tb" "first_tb" 2 3;
+ .timescale -9 -11;
+v0x1537163f0_0 .net "first_out1", 0 0, L_0x153716610;  1 drivers
+v0x153716490_0 .var "test_sig1", 0 0;
+v0x153716540_0 .var "test_sig2", 0 0;
+S_0x153706060 .scope module, "u_test_module" "first_module" 2 34, 3 1 0, S_0x153705ef0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "first_in1";
+    .port_info 1 /INPUT 1 "first_in2";
+    .port_info 2 /OUTPUT 1 "first_out1";
+L_0x153716610 .functor AND 1, v0x153716490_0, v0x153716540_0, C4<1>, C4<1>;
+v0x153706270_0 .net "first_in1", 0 0, v0x153716490_0;  1 drivers
+v0x153716250_0 .net "first_in2", 0 0, v0x153716540_0;  1 drivers
+v0x1537162f0_0 .net "first_out1", 0 0, L_0x153716610;  alias, 1 drivers
+    .scope S_0x153705ef0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "first_tb.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000001 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x153705ef0;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x153716490_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x153716540_0, 0, 1;
+    %delay 1000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x153716490_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x153716540_0, 0, 1;
+    %delay 1000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x153716490_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x153716540_0, 0, 1;
+    %delay 1000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x153716490_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x153716540_0, 0, 1;
+    %delay 1000, 0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "first_tb.v";
+    "first_module.v";

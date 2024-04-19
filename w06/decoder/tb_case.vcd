@@ -1,0 +1,70 @@
+$date
+	Mon Apr 15 21:17:14 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_case $end
+$var wire 4 ! w_y [3:0] $end
+$var reg 2 " test_sig [1:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 "
+b1011 !
+$end
+#10
+b110 !
+b1 "
+#20
+b101 !
+b10 "
+#30
+b1101 !
+b11 "
+#40
+b1011 !
+b0 "
+#50
+b110 !
+b1 "
+#60
+b101 !
+b10 "
+#70
+b1101 !
+b11 "
+#80
+b1011 !
+b0 "
+#90
+b110 !
+b1 "
+#100
+b101 !
+b10 "
+#110
+b1101 !
+b11 "
+#120
+b1011 !
+b0 "
+#130
+b110 !
+b1 "
+#140
+b101 !
+b10 "
+#150
+b1101 !
+b11 "
+#160
+b1011 !
+b0 "
