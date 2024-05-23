@@ -1,0 +1,136 @@
+$date
+	Tue May  7 14:56:33 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench_acc_8bit $end
+$var wire 16 ! w_acc [15:0] $end
+$var reg 1 " r_clk $end
+$var reg 1 # r_enable $end
+$var reg 8 $ r_in [7:0] $end
+$var reg 1 % r_init $end
+$var reg 1 & r_rst_n $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0&
+0%
+bx $
+0#
+0"
+b0 !
+$end
+#10
+b0 $
+1"
+#20
+0"
+#30
+1"
+#40
+0"
+1&
+#50
+1"
+#60
+0"
+#70
+1"
+#80
+0"
+#90
+1"
+#100
+0"
+#110
+1"
+#120
+0"
+#130
+1%
+1"
+#140
+0"
+#150
+0%
+1"
+#160
+0"
+#170
+b1 !
+b1 $
+1#
+1"
+#180
+0"
+#190
+b11 !
+b10 $
+1"
+#200
+0"
+#210
+b110 !
+b11 $
+1"
+#220
+0"
+#230
+b1010 !
+b100 $
+1"
+#240
+0"
+#250
+b1111 !
+b101 $
+1"
+#260
+0"
+#270
+b10101 !
+b110 $
+1"
+#280
+0"
+#290
+b11100 !
+b111 $
+1"
+#300
+0"
+#310
+b100100 !
+b1000 $
+1"
+#320
+0"
+#330
+b101101 !
+b1001 $
+1"
+#340
+0"
+#350
+b110111 !
+b1010 $
+1"
+#360
+0"
+#370
+0#
+1"
+#380
+0"
+#390
+1"
+#400
+0"
