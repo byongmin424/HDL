@@ -119,4 +119,18 @@ always @(posedge i_clk or negedge i_rst_n) begin
     end
 end
 
+
+reg     r_out_vld;
+always @(posedge i_clk or negedge i_rst_n) begin
+    if (~i_rst_n)
+        r_out_vld <= 0;
+    else begin
+        if (i_en & (r_cnt == 7))
+            r_out_vld <= 1;
+        else if (~i_en & (r_cnt == 7))
+            r_out_vld <= 0;
+    end
+end
+assign o_out_vld = r_out_vld;
+
 endmodule
