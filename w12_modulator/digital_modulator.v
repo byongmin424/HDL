@@ -10,19 +10,20 @@ module digital_modulator (
     output  reg     [11:0]  o_q
 );
 
-// i_en이 High일때 0~7까지 반복 카운트
+// i_en이 high일 때 0~7까지 반복 카운트
+// o_out_vldrk high일 때도 카운트 지속
 reg     [2:0]   r_cnt;
 always @(posedge i_clk or negedge i_rst_n) begin
     if (~i_rst_n)
         r_cnt <= 0;
     else begin
-        if (i_en)
+        if (i_en | o_out_vld)
             r_cnt <= r_cnt + 1; 
     end
 end
 
 // i_data_vld가 High일때 i_data를 순서대로 저장
-reg     [5:0]   r_shift_reg; // why 6bit? -> 64항(6비트)고려
+reg     [5:0]   r_shift_reg; // why 6bit? -> 64QAM(6비트)고려
 always @(posedge i_clk or negedge i_rst_n) begin
     if (~i_rst_n)
         r_shift_reg <= 0;
@@ -120,15 +121,14 @@ always @(posedge i_clk or negedge i_rst_n) begin
 end
 
 
+// o_out_vld는 i_en에 8 cycle 지연된 신호
 reg     r_out_vld;
 always @(posedge i_clk or negedge i_rst_n) begin
     if (~i_rst_n)
         r_out_vld <= 0;
     else begin
-        if (i_en & (r_cnt == 7))
-            r_out_vld <= 1;
-        else if (~i_en & (r_cnt == 7))
-            r_out_vld <= 0;
+        if (r_cnt == 7)
+            r_out_vld <= i_en;
     end
 end
 assign o_out_vld = r_out_vld;
